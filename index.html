@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEART MUSIC | NEW ERA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --red: #ff0000;
+            --black: #000000;
+            --dark: #0a0a0a;
+            --gray: #1a1a1a;
+        }
+
+        body {
+            background-color: var(--black);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: rgba(0,0,0,0.9);
+            border-bottom: 1px solid var(--gray);
+            position: fixed;
+            width: 90%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-text {
+            font-family: 'Dela Gothic One', cursive;
+            font-size: 24px;
+            color: var(--red);
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Dela Gothic One', cursive;
+            font-size: 14px;
+            margin-left: 30px;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--red); }
+
+        /* HERO SECTION */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, rgba(255,0,0,0.1) 0%, rgba(0,0,0,1) 80%);
+            margin-top: 80px;
+        }
+
+        .hero h1 {
+            font-family: 'Dela Gothic One', cursive;
+            font-size: 80px;
+            margin: 0;
+            text-shadow: 0 0 30px var(--red);
+        }
+
+        .hero p {
+            font-size: 18px;
+            letter-spacing: 10px;
+            color: var(--red);
+            font-weight: 800;
+            margin-bottom: 40px;
+        }
+
+        /* RELEASES GRID */
+        .releases {
+            padding: 100px 5%;
+        }
+
+        .section-title {
+            font-family: 'Dela Gothic One', cursive;
+            font-size: 32px;
+            border-left: 5px solid var(--red);
+            padding-left: 20px;
+            margin-bottom: 50px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .release-card {
+            background: var(--dark);
+            border: 1px solid var(--gray);
+            padding: 15px;
+            transition: 0.4s;
+        }
+
+        .release-card:hover {
+            border-color: var(--red);
+            transform: translateY(-10px);
+        }
+
+        .cover {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background: #111;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-weight: 900;
+        }
+
+        .release-card h3 {
+            font-family: 'Dela Gothic One', cursive;
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .release-card p {
+            color: #666;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 50px 5%;
+            background: var(--dark);
+            text-align: center;
+            border-top: 1px solid var(--gray);
+        }
+
+        .btn-main {
+            display: inline-block;
+            padding: 15px 40px;
+            background: var(--red);
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Dela Gothic One', cursive;
+            margin-top: 20px;
+        }
+
+        /* SVG Heart Logo */
+        .heart-icon {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-section">
+            <svg class="heart-icon" viewBox="0 0 200 180">
+                <path fill="#ff0000" d="M100,20 C140,-10 210,30 180,90 C150,150 100,170 100,170 C100,170 50,150 20,90 C-10,30 60,-10 100,20 Z" />
+            </svg>
+            <span class="logo-text">HEART MUSIC</span>
+        </div>
+        <nav>
+            <a href="#">ARTISTS</a>
+            <a href="#">RELEASES</a>
+            <a href="http://heart-vpn.duckdns.org/news">NEWS</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>HEART MUSIC</h1>
+        <p>FORMER LH RECORDS</p>
+        <a href="#releases" class="btn-main">LATEST DROPS</a>
+    </section>
+
+    <section class="releases" id="releases">
+        <h2 class="section-title">RECENT RELEASES</h2>
+        <div class="grid">
+            <div class="release-card">
+                <div class="cover">IMAGE 1</div>
+                <h3>BLOOD STREAM</h3>
+                <p>SINGLE / 2026</p>
+            </div>
+            <div class="release-card">
+                <div class="cover">IMAGE 2</div>
+                <h3>RED ZONE</h3>
+                <p>EP / 2026</p>
+            </div>
+            <div class="release-card">
+                <div class="cover">IMAGE 3</div>
+                <h3>CYBER HEART</h3>
+                <p>ALBUM / 2026</p>
+            </div>
+            <div class="release-card">
+                <div class="cover">IMAGE 4</div>
+                <h3>GOTHIC BEATS</h3>
+                <p>SINGLE / 2026</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p style="color: #444; font-family: 'Dela Gothic One';">HEART MUSIC PROJECT — NEW ERA OF SOUND</p>
+        <div style="margin-top: 20px;">
+            <a href="#" style="color:var(--red); text-decoration: none;">INSTAGRAM</a> | 
+            <a href="#" style="color:var(--red); text-decoration: none;">YOUTUBE</a> | 
+            <a href="#" style="color:var(--red); text-decoration: none;">VK</a>
+        </div>
+    </footer>
+
+</body>
+</html>
