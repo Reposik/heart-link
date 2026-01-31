@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEART MUSIC | NEWS FEED</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --red: #ff0000;
+            --black: #000000;
+            --dark: #0a0a0a;
+            --gray: #1a1a1a;
+        }
+
+        body {
+            background-color: var(--black);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding-top: 100px; /* Отступ под фиксированный хедер */
+        }
+
+        /* HEADER (такой же как на главной) */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: rgba(0,0,0,0.95);
+            border-bottom: 1px solid var(--gray);
+            position: fixed;
+            width: 90%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-family: 'Dela Gothic One', cursive;
+            font-size: 24px;
+            color: var(--red);
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Dela Gothic One', cursive;
+            font-size: 14px;
+            margin-left: 30px;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--red); }
+
+        /* CONTENT */
+        .news-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 5%;
+        }
+
+        .section-header {
+            font-family: 'Dela Gothic One', cursive;
+            font-size: 40px;
+            color: #fff;
+            margin-bottom: 60px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .news-item {
+            background: var(--dark);
+            border: 1px solid var(--gray);
+            margin-bottom: 40px;
+            padding: 40px;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .news-item:hover {
+            border-color: var(--red);
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.1);
+        }
+
+        .news-item::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 4px; height: 100%;
+            background: var(--red);
+        }
+
+        .news-date {
+            font-family: 'Dela Gothic One', cursive;
+            color: var(--red);
+            font-size: 12px;
+            display: block;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .news-title {
+            font-family: 'Dela Gothic One', cursive;
+            font-size: 24px;
+            margin: 0 0 20px 0;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .news-text {
+            color: #888;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 60px 5%;
+            text-align: center;
+            background: var(--dark);
+            border-top: 1px solid var(--gray);
+            margin-top: 100px;
+        }
+
+        .footer-logo {
+            font-family: 'Dela Gothic One', cursive;
+            color: #222;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-section">
+            <svg style="width:30px;height:30px;" viewBox="0 0 200 180">
+                <path fill="#ff0000" d="M100,20 C140,-10 210,30 180,90 C150,150 100,170 100,170 C100,170 50,150 20,90 C-10,30 60,-10 100,20 Z" />
+            </svg>
+            <span class="logo-text">HEART MUSIC</span>
+        </a>
+        <nav>
+            <a href="index.html">ARTISTS</a>
+            <a href="index.html#releases">RELEASES</a>
+            <a href="#" style="color:var(--red);">NEWS</a>
+        </nav>
+    </header>
+
+    <div class="news-container">
+        <h1 class="section-header">LATEST UPDATES</h1>
+
+        <article class="news-item">
+            <span class="news-date">31.01.2026</span>
+            <h2 class="news-title">LH RECORDS ТЕПЕРЬ HEART MUSIC</h2>
+            <p class="news-text">
+                Мы официально объявляем о масштабном ребрендинге. LH RECORDS уходит в историю, уступая место HEART MUSIC. Это не просто смена названия — это полная перезагрузка звука, визуального стиля и подхода к работе с артистами. Добро пожаловать в новую эру.
+            </p>
+        </article>
+
+        <article class="news-item">
+            <span class="news-date">28.01.2026</span>
+            <h2 class="news-title">ОТКРЫТ ПРИЕМ ДЕМО-ЗАПИСЕЙ</h2>
+            <p class="news-text">
+                Наш лейбл ищет новые таланты в жанрах Phonk, Cyberpunk и Gothic Trap. Если твой звук пронизан энергией и агрессией — присылай свои работы в наш бот или на официальную почту. Лучшие треки попадут в первый сборник под брендом HEART.
+            </p>
+        </article>
+
+        <article class="news-item">
+            <span class="news-date">20.01.2026</span>
+            <h2 class="news-title">ЗАПУСК СОБСТВЕННОЙ ИНФРАСТРУКТУРЫ</h2>
+            <p class="news-text">
+                Для поддержки наших артистов и фанатов мы запустили HEART VPN. Теперь доступ к мировым стриминговым площадкам и инструментам для творчества открыт 24/7. Мы заботимся о том, чтобы музыка не имела границ.
+            </p>
+        </article>
+    </div>
+
+    <footer>
+        <div class="footer-logo">HEART MUSIC TERMINAL / NEWS FEED</div>
+    </footer>
+
+</body>
+</html>
