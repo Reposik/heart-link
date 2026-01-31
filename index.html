@@ -61,13 +61,12 @@
 
         /* HERO SECTION */
         .hero {
-            height: 80vh;
+            height: 100vh; /* Увеличил высоту до полного экрана, так как кнопки больше нет */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             background: radial-gradient(circle, rgba(255,0,0,0.1) 0%, rgba(0,0,0,1) 80%);
-            margin-top: 80px;
         }
 
         .hero h1 {
@@ -75,6 +74,7 @@
             font-size: 80px;
             margin: 0;
             text-shadow: 0 0 30px var(--red);
+            text-align: center;
         }
 
         .hero p {
@@ -82,7 +82,8 @@
             letter-spacing: 10px;
             color: var(--red);
             font-weight: 800;
-            margin-bottom: 40px;
+            margin: 10px 0 0 0;
+            text-transform: uppercase;
         }
 
         /* RELEASES GRID */
@@ -140,7 +141,6 @@
             margin: 0;
         }
 
-        /* FOOTER */
         footer {
             padding: 50px 5%;
             background: var(--dark);
@@ -148,17 +148,6 @@
             border-top: 1px solid var(--gray);
         }
 
-        .btn-main {
-            display: inline-block;
-            padding: 15px 40px;
-            background: var(--red);
-            color: #fff;
-            text-decoration: none;
-            font-family: 'Dela Gothic One', cursive;
-            margin-top: 20px;
-        }
-
-        /* SVG Heart Logo */
         .heart-icon {
             width: 40px;
             height: 40px;
@@ -175,16 +164,15 @@
             <span class="logo-text">HEART MUSIC</span>
         </div>
         <nav>
-            <a href="#">ARTISTS</a>
-            <a href="#">RELEASES</a>
-            <a href="http://heart-vpn.duckdns.org/news">NEWS</a>
+            <a href="#artists">ARTISTS</a>
+            <a href="#releases">RELEASES</a>
+            <a href="news.html">NEWS</a>
         </nav>
     </header>
 
     <section class="hero">
         <h1>HEART MUSIC</h1>
         <p>FORMER LH RECORDS</p>
-        <a href="#releases" class="btn-main">LATEST DROPS</a>
     </section>
 
     <section class="releases" id="releases">
